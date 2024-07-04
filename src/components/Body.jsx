@@ -61,6 +61,11 @@ function Body(props) {
                     <Time date="6/18/2024" text="Learned basic PHP and started coding simple games in HTML/CSS/JS; Learned to handle events and element styling with JS; Created a local emailer using PHPMailer"></Time>
                     <Time date="6/25/2024" text="Learned basic React; Created this website; useState hook, rendering lists, conditional rendering, props"></Time>
                     <Time date="6/26/2024" text="Learned C# syntax and basic Unity interface"></Time>
+                    <Time date="6/28/2024" text="Learned to implement a dynamic scene changer in unity"></Time>
+                    <Time date="6/29/2024" text="Learned Unity animations, transitions, and tilesets"></Time>
+                    <Time date="6/30/2024" text="Learned PlayerPrefs; stored y-value of player upon scene change"></Time>
+                    <Time date="7/3/2024" text="Completed levels 2 and 3; added generic tilemaps (i.e. 1x2 floor tile)"></Time>
+                    <Time date="7/4/2024" text="Learned bucket sort; started on NeetCode roadmap"></Time>
                     </div>
                    
                

@@ -8,6 +8,7 @@ import ticTacToe2p from '../assets/tic-tac-toe2p.png';
 import connect4 from '../assets/connect4.png';
 import wordle from '../assets/wordle.png';
 import slidePuzzle from '../assets/slide-puzzle.png';
+import checkers from '../assets/checkers.png';
 
 let rockPaperScissorsDesc = "Play Rock Paper Scissors!";
 let ticTacToe1pDesc = "Play Tic Tac Toe against the computer"
@@ -15,7 +16,7 @@ let ticTacToe2pDesc = "Play Tic Tac Toe against your friend"
 let connect4Desc = "Play Connect4 against your friend"
 let wordleDesc = "Play Wordle infinitely many times"
 let slidePuzzleDesc = "Play Slide Puzzles where you can choose the NxN dimensions of the board, and order the numbers left to right and top to bottom to win!"
-
+let checkersDesc = "Play the classic checkers! (No forced jumps)."
 import {useState} from "react";
 
 let test = [1];
@@ -26,20 +27,15 @@ function Body(props) {
 
             return( 
                 <div className="body-content" style={{margin:"0 auto"}}>
-               <Card img={rockPaperScissors} name="Rock Paper Scissors" link="https://justclaner.github.io/games/rock-paper-scissors.html" desc={rockPaperScissorsDesc}></Card>
-               <Card img={ticTacToe1p} name="Tic Tac Toe (1 Player)" link="https://justclaner.github.io/games/tic-tac-toe1p.html" desc={ticTacToe1pDesc}></Card>
-               <Card img={ticTacToe2p} name="Tic Tac Toe (2 Player)" link="https://justclaner.github.io/games/tic-tac-toe2p.html" desc={ticTacToe2pDesc}></Card>
-               <Card img={connect4} name="Connect 4" link="https://justclaner.github.io/games/connect4.html" desc={connect4Desc}></Card>
-               <Card img={wordle} name="Wordle" link="https://justclaner.github.io/games/wordle.html" desc={wordleDesc}></Card>
-               <Card img={slidePuzzle} name="Slide Puzzle" link="https://justclaner.github.io/games/slidePuzzle.html" desc={slidePuzzleDesc}></Card>
+                <Card img={checkers} name = "Checkers" link="https://justclaner.github.io/checkers/" desc={checkersDesc}></Card>
+                <Card img={slidePuzzle} name="Slide Puzzle" link="https://justclaner.github.io/games/slidePuzzle.html" desc={slidePuzzleDesc}></Card>
+                <Card img={wordle} name="Wordle" link="https://justclaner.github.io/games/wordle.html" desc={wordleDesc}></Card>
+                <Card img={connect4} name="Connect 4" link="https://justclaner.github.io/games/connect4.html" desc={connect4Desc}></Card>
+                <Card img={ticTacToe1p} name="Tic Tac Toe (1 Player)" link="https://justclaner.github.io/games/tic-tac-toe1p.html" desc={ticTacToe1pDesc}></Card>
+                <Card img={ticTacToe2p} name="Tic Tac Toe (2 Player)" link="https://justclaner.github.io/games/tic-tac-toe2p.html" desc={ticTacToe2pDesc}></Card>
+                <Card img={rockPaperScissors} name="Rock Paper Scissors" link="https://justclaner.github.io/games/rock-paper-scissors.html" desc={rockPaperScissorsDesc}></Card>
               
-                {/* <a href="https://justclaner.github.io/games/">Games Hub</a> <br />
-                <a href="https://justclaner.github.io/games/rock-paper-scissors.html">Rock Paper Scissors</a> <br />
-                <a href="https://justclaner.github.io/games/tic-tac-toe1p.html">Tic Tac Toe (1 Player)</a> <br />
-                <a href="https://justclaner.github.io/games/tic-tac-toe2p.html">Tic Tac Toe (2 Player)</a> <br />
-                <a href="https://justclaner.github.io/games/connect4.html">Connect 4</a> <br />
-                <a href="https://justclaner.github.io/games/wordle.html">Wordle</a> <br />
-                <a href="https://justclaner.github.io/games/slidePuzzle.html">Slide Puzzle Game</a> */}
+               
                 </div>
             );
 

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 function Time(props) {
     return(
-        <div style={{marginBottom:"100px"}}>
-        <h1>{props.date}</h1>
-        <p>{props.text}</p>
+        <div style={{marginBottom:"50px"}}>
+        <h3>{props.date}</h3>
+        <p style={{fontSize:"20px"}}>{props.text}</p>
         </div>
 
     );

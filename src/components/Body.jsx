@@ -75,6 +75,8 @@ function Body(props) {
                     <Time date="7/9/2024" text="Added win condition for making opposing side have no possible moves and three-fold repetition draw"></Time>
                     <br/>
                     <Time date="7/10/2024" text="Started learning on roadmap.sh"></Time>
+                    <Time date="7/12/2024" text="Learned javascript fetch() api"></Time>
+                    <Time date="7/13/2024" text="Created a Pokemon Stats lookup with javascript fetch()"></Time>
                     </div>
                    
                

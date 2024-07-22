@@ -1,6 +1,7 @@
 body {
     background-color: gray;
     text-align: center;
+    padding-bottom: 200px;
 }
 
 .header {
@@ -16,6 +17,7 @@ button {
     padding:10px;
     border: 1px solid black;
     text-align: center;
+    transition: 0.25s;
 }
 
 
@@ -40,6 +42,7 @@ button:active {
     padding: 10px;
 }
 
+
 .body-content a {
     display: block;
     margin-top: 10px;
@@ -48,16 +51,24 @@ button:active {
 .timeline-content {
     display: block;
     width: 80%;
-    padding: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
+
     flex-wrap: wrap;
     margin: 0 auto;
     text-align: left;
 }
 
-.timeline-content p {
-    font-size: 24px;
+.timeline-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    border:1px solid black;
 }
+
+.timeline-content p {
+    font-size: 22px;
+}
+
 
 .summary {
     margin: 20px auto;
@@ -72,10 +83,18 @@ button:active {
 .card {
     border: 1px solid black;
     text-align: center;
-    box-shadow:2px;
+    box-shadow:0 0;
     width: 25%;
     margin: 15px;
     padding: 10px;
+    transition: 0.1s ease-out;
+}
+
+.card:hover {
+    /* color: rgb(213, 243, 255) */
+    box-shadow: 5px 10px;
+    transform:translate(-5px,-10px);
+    scale: 1.02;
 }
 
 .card img {

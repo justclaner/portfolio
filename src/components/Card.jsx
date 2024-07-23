@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 function Card(props) {
 const cardStyle = {
-    backgroundColor: "rgb(213, 243, 255)",
+    backgroundColor: "#29232e",
     borderRadius: "15px",
     position: "relative"
 }

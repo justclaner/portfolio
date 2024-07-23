@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 function Page(props) {
 const [selectedIndex, setSelectedIndex] = useState(0);
     const selected = {
-        transform: "translate(5px,5px)",
-        boxShadow: "0 0"
+        textDecoration: "underline"
+        // transform: "translate(0px,5px)",
+        // boxShadow: "0 0"
        // visibility: "hidden"
       };
       const deselected = {
-        transform: "translateY(0)",
-        boxShadow: "5px 5px"
+        textDecoration: ""
+        // transform: "translateY(0)",
+        // boxShadow: "0px 5px white"
      //   visibility: "visible"
       }
 

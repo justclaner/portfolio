@@ -1,7 +1,7 @@
 import Page from './components/Page.jsx';
 
 function App() {
-  let menus = ['Projects','Timeline','About Me','About this Site'];
+  let menus = ['About Me','Projects','Timeline','About this Site'];
 
   
   //const output = (name) => {console.log(name);}

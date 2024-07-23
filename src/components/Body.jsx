@@ -1,3 +1,5 @@
+import {useState, useEffect} from 'react';
+
 import Card from './Card.jsx';
 import Link from './Link.jsx';
 import Time from './Time.jsx';
@@ -24,39 +26,76 @@ let checkersDesc = "Play the classic checkers! (No forced jumps)."
 let pokemonDesc = "Lookup Pokemon Stats using the official API!"
 let galleryDesc = "Upload your images and create a gallery!"
 
-let test = [1];
-function Body(props) {
 
+function Body(props) {
+    const [loaded, setLoaded] = useState(false);
+    useEffect(()=>{
+        setLoaded(true);
+    },[])
     switch(props.page) {
         case 0:
-        const projectStyle = {
-            margin:"0 auto",
-            backgroundColor:"lightblue",
-            borderRadius: "10px"
-        }
-            return( 
-                <>
-                <h3>Click any project to get started!</h3> <br />
-                <div className="body-content" style={projectStyle}>
-                <Card img={gallery} name = "Image Gallery Scroller" link="https://justclaner.github.io/image-gallery/" desc={galleryDesc}></Card>
-                <Card img={pokemon} name = "Pokemon Stats Lookup" link="https://justclaner.github.io/api/pokemon.html" desc={pokemonDesc} />
-                <Card img={checkers} name = "Checkers" link="https://justclaner.github.io/checkers/" desc={checkersDesc}></Card>
-                <Card img={slidePuzzle} name="Slide Puzzle" link="https://justclaner.github.io/games/slidePuzzle.html" desc={slidePuzzleDesc} />
-                <Card img={wordle} name="Wordle" link="https://justclaner.github.io/games/wordle.html" desc={wordleDesc} />
-                <Card img={connect4} name="Connect 4" link="https://justclaner.github.io/games/connect4.html" desc={connect4Desc} />
-                <Card img={ticTacToe1p} name="Tic Tac Toe (1 Player)" link="https://justclaner.github.io/games/tic-tac-toe1p.html" desc={ticTacToe1pDesc} />
-                <Card img={ticTacToe2p} name="Tic Tac Toe (2 Player)" link="https://justclaner.github.io/games/tic-tac-toe2p.html" desc={ticTacToe2pDesc} />
-                <Card img={rockPaperScissors} name="Rock Paper Scissors" link="https://justclaner.github.io/games/rock-paper-scissors.html" desc={rockPaperScissorsDesc} />
-              
-                </div>
-                </>
-            );
+            const aboutMe = {
+                display: "block",
+                margin: "0 auto"
+             }
+   
+            return (
+               loaded && <div className="body-content" style={aboutMe} >
+                    <h1>Justin Zou</h1>
+                    {/* <img src="https://via.placeholder.com/250" /> */}
+                    <img src={pfp} className="profile-picture" />
+                    <div className="links">
+
+                        <Link label="Email me:" link="mailto:justclaner@gmail.com" text="justclaner@gmail.com" ></Link>
+                        <Link label="Connect with me:" link="https://www.linkedin.com/in/justin-z-ab0a922a4/" text="linkedin.com/in/justin-zou-ab0a922a4/"></Link>
+                        <Link label="Check out my other repositories:" link="https://github.com/justclaner" text="github.com/justclaner"></Link>
+                        {/* <Link label="LinkedIn:" link="https://www.linkedin.com/in/justin-zou-ab0a922a4/" text="https://www.linkedin.com/in/justin-zou-ab0a922a4/"></Link> */}
+ 
+                    </div>
+                    <h2>Software Engineer</h2>
+
+                    <div className="summary">
+                    <p>
+                    I strive to connect with others and help out those in need. I thrive in fast-paced environments where problem-solving is often done. 
+                    I am versatile, self-motivated, and enthusiastic to learn more. I love working on both the frontend and backend of software development. 
+                    I really like creating something out of nothing and seeing progress being made. Using technology and software integration, I want to take 
+                    initiative to make the world more accessible through engineering and solve global issues.
+                    </p>
+
+                    <p>I am a rising freshman at UPenn (class of 2028) majoring in Computer Science. I have always been fascinated by computers and technology since I was young. I am interested in mainly web development or game development. I also spend free time learning algorithms and solving challenging problems on leetcode, edabit, and TopSWE.  </p>
+                    </div>
+
+                 </div> 
+                );
 
         case 1:
+                    const projectStyle = {
+                        margin:"0 auto",
+                        backgroundColor:"#191922",
+                        borderRadius: "10px"
+                    }
+                        return( 
+                            loaded &&     <>
+                            <h3>Click any project to get started!</h3> <br />
+                            <div className="body-content" style={projectStyle}>
+                            <Card img={gallery} name = "Image Gallery Scroller" link="https://justclaner.github.io/image-gallery/" desc={galleryDesc}></Card>
+                            <Card img={pokemon} name = "Pokemon Stats Lookup" link="https://justclaner.github.io/api/pokemon.html" desc={pokemonDesc} />
+                            <Card img={checkers} name = "Checkers" link="https://justclaner.github.io/checkers/" desc={checkersDesc}></Card>
+                            <Card img={slidePuzzle} name="Slide Puzzle" link="https://justclaner.github.io/games/slidePuzzle.html" desc={slidePuzzleDesc} />
+                            <Card img={wordle} name="Wordle" link="https://justclaner.github.io/games/wordle.html" desc={wordleDesc} />
+                            <Card img={connect4} name="Connect 4" link="https://justclaner.github.io/games/connect4.html" desc={connect4Desc} />
+                            <Card img={ticTacToe1p} name="Tic Tac Toe (1 Player)" link="https://justclaner.github.io/games/tic-tac-toe1p.html" desc={ticTacToe1pDesc} />
+                            <Card img={ticTacToe2p} name="Tic Tac Toe (2 Player)" link="https://justclaner.github.io/games/tic-tac-toe2p.html" desc={ticTacToe2pDesc} />
+                            <Card img={rockPaperScissors} name="Rock Paper Scissors" link="https://justclaner.github.io/games/rock-paper-scissors.html" desc={rockPaperScissorsDesc} />
+                          
+                            </div>
+                            </>
+                        );
+        case 2:
             return( 
                 
-                   <div className="timeline-content">
-                    <div className="timeline-section" style={{backgroundColor:"rgb(255, 225, 183)"}}>
+                loaded &&   <div className="timeline-content">
+                    <div className="timeline-section" >
                     <div style={{textAlign:"center"}}><h1>Before/During High School</h1></div>
                     <Time date="2019" text="First picked up HTML from general interest in web-browser idle/incermental games" />
                     <Time date="Aug 2022" text="Created various math problem generators using HTML/CSS/JS" />
@@ -70,9 +109,9 @@ function Body(props) {
                     <Time date="4/21/2024" text="Started on a AP Physics 1 Online Calculator for all scenarios; Unfinished, only coded calculators 1d/2d kinematics and basic force equations" />
                     </div>
 
-                    <div className="timeline-section" style={{backgroundColor:"rgb(163, 255, 163)"}}>
+                    <div className="timeline-section" >
                     <div style={{textAlign:"center"}}><h1>Summer Before UPenn</h1></div>
-                    <Time date="6/17/2024" text="Learned basic MySQL; Practiced simple algorithms including subqueries on LeetCode and a local server" />
+                    <Time date="6/17/2024" text="Learned basic MySQL; Practiced simple agorithms including subqueries on LeetCode and a local server" />
                     <Time date="6/18/2024" text="Learned basic PHP and started coding simple games in HTML/CSS/JS; Learned to handle events and element styling with JS; Created a local emailer using PHPMailer" />
                     <Time date="6/25/2024" text="Learned basic React; Created this website; useState hook, rendering lists, conditional rendering, props" />
                     <Time date="6/26/2024" text="Learned C# syntax and basic Unity interface" />
@@ -97,45 +136,15 @@ function Body(props) {
                    
                
              );
-        case 2:
-             const aboutMe = {
-                display: "block",
-                margin: "0 auto"
-             }
-   
-            return (
-                 <div className="body-content" style={aboutMe} >
-                    <h1>Justin Zou</h1>
-                    {/* <img src="https://via.placeholder.com/250" /> */}
-                    <img src={pfp} style={{width:"200px"}} />
-                    <div className="links">
-
-                        <Link label="Gmail:" link="mailto:justclaner@gmail.com" text="justclaner@gmail.com"></Link>
-                        <Link label="LinkedIn:" link="https://www.linkedin.com/in/justin-zou-ab0a922a4/" text="https://www.linkedin.com/in/justin-zou-ab0a922a4/"></Link>
-                        <Link label="Github:" link="https://github.com/justclaner"></Link>
-                        {/* <Link label="LinkedIn:" link="https://www.linkedin.com/in/justin-zou-ab0a922a4/" text="https://www.linkedin.com/in/justin-zou-ab0a922a4/"></Link> */}
- 
-                    </div>
-                    <h2>Software Engineer</h2>
-
-                    <div className="summary">
-                    <p>
-                    I strive to connect with others and help out those in need. I thrive in fast-paced environments where problem-solving is often done. 
-                    I am versatile, self-motivated, and enthusiastic to learn more. I love working on both the frontend and backend of software development. 
-                    I really like creating something out of nothing and seeing progress being made. Using technology and software integration, I want to take 
-                    initiative to make the world more accessible through engineering and solve global issues.
-                    </p>
-
-                    <p>I am a rising freshman at UPenn (class of 2028) majoring in Computer Science. I have always been fascinated by computers and technology since I was young. I am interested in mainly web development or game development. I also spend free time learning algorithms and solving challenging problems on leetcode, edabit, and TopSWE.  </p>
-                    </div>
-
-                 </div> 
-                );
+           
         case 3:
-
+             const aboutSite = {
+                margin: "0 auto",
+                width: "50%"
+             }
             return( 
-                <>
-                    <p className="body-content" style={{margin: "0 auto"}}>This site was made using HTML, CSS, JavaScript, and React Library. I made this portfolio project as 
+                loaded &&   <>
+                    <p className="body-content" style={aboutSite}>This site was made using HTML, CSS, JavaScript, and React Library. I made this portfolio project as 
                         an exercise to learn React for the first time. At first, I felt like React was overcomplicating a lot of concepts, but I soon realized its effectiveness
                         in dynamic programming. It's as if I've discovered a for loop for writing complex containers filled with many elements and various styles. This is just one
                         step in my journey to learn more concepts and have better practice in both front-end in back-end development.

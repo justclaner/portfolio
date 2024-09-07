@@ -86,8 +86,8 @@ function Body(props) {
               </p>
 
               <p>
-                I am a rising freshman at UPenn (class of 2028) majoring in
-                Computer Science. I have always been fascinated by computers and
+                I am a freshman at UPenn (class of 2028) majoring in Computer
+                Science. I have always been fascinated by computers and
                 technology since I was young. I am interested in mainly web
                 development or game development. I also spend free time learning
                 algorithms and solving challenging problems on leetcode, edabit,
